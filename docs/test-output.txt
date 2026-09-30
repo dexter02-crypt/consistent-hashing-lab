@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: hash deterministic
+ok 1 - hash deterministic
+  ---
+  duration_ms: 0.765174
+  type: 'test'
+  ...
+# Subtest: ring sorted and sized
+ok 2 - ring sorted and sized
+  ---
+  duration_ms: 0.344559
+  type: 'test'
+  ...
+# Subtest: consistent assignment only uses known nodes
+ok 3 - consistent assignment only uses known nodes
+  ---
+  duration_ms: 0.456679
+  type: 'test'
+  ...
+# Subtest: adding a node moves fewer keys than modulo on deterministic sample
+ok 4 - adding a node moves fewer keys than modulo on deterministic sample
+  ---
+  duration_ms: 13.243018
+  type: 'test'
+  ...
+# Subtest: distribution counts every assignment
+ok 5 - distribution counts every assignment
+  ---
+  duration_ms: 0.653366
+  type: 'test'
+  ...
+# Subtest: input bounds enforced
+ok 6 - input bounds enforced
+  ---
+  duration_ms: 0.366383
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 71.296317

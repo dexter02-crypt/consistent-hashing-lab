@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Consistent Hashing Lab</title><link rel="stylesheet" href="styles.css"></head>
+<body><main>
+<header><div><div class="eyebrow">Distributed systems</div><h1>Consistent<br>Hashing Lab</h1></div><p class="muted">Compare key remapping under modulo hashing and a virtual-node hash ring.</p></header>
+<div class="grid">
+<section class="card span8"><svg id="ring" viewBox="0 0 500 500" aria-label="hash ring"></svg></section>
+<section class="card span4"><h2>Experiment</h2><div class="controls"><input id="newNode" value="echo" aria-label="node name"><button id="add" class="primary">Add node</button><button id="remove">Remove last</button><button id="setBaseline">Set baseline</button><button id="reset">Reset</button></div><p id="nodes"></p><label>Keys<input id="keys" type="number" min="10" max="10000" value="1000"></label><label>Virtual nodes / server<input id="vn" type="number" min="1" max="256" value="64"></label></section>
+<section class="card span4"><div class="eyebrow">Consistent hashing remapped</div><div id="consistent" class="metric"></div></section>
+<section class="card span4"><div class="eyebrow">Modulo hashing remapped</div><div id="modulo" class="metric"></div></section>
+<section class="card span4"><div class="eyebrow">Active nodes</div><div id="nodeCount" class="metric"></div></section>
+<section class="card span12"><h2>Current consistent-hash distribution</h2><table><thead><tr><th>Node</th><th>Keys</th><th>Share</th></tr></thead><tbody id="table"></tbody></table></section>
+</div><footer>FNV-1a is used only as a deterministic teaching hash here; it is not a cryptographic hash.</footer>
+<script type="module" src="src/app.js"></script></main></body></html>
