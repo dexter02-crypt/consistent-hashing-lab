@@ -1,17 +1,22 @@
 # Consistent Hashing Lab
 
-Interactive browser experiment comparing ordinary modulo placement with a virtual-node consistent-hash ring.
+Interactive browser experiment comparing modulo placement with a weighted virtual-node consistent-hash ring.
 
-## What it demonstrates
+**Live demo:** https://dexter02-crypt.github.io/consistent-hashing-lab/
 
-- deterministic key hashing and ring placement
-- virtual nodes
-- binary search for the next clockwise owner
-- distribution across active nodes
-- key remapping when membership changes
-- a direct comparison with modulo hashing
+## v1.1 experiments
 
-This is an educational systems model, not a production load balancer or a cryptographic implementation.
+- weighted nodes
+- configurable virtual-node density
+- membership churn by adding or removing several nodes
+- key-remapping comparison against ordinary modulo hashing
+- per-node observed share versus configured weight target
+- max/min load ratio and coefficient of variation
+- deterministic 10k–100k key experiments
+- browser-side timing
+- JSON experiment export
+
+The implementation uses FNV-1a as a compact deterministic teaching hash. It is not collision-resistant and is not suitable for cryptographic use.
 
 ## Run
 
@@ -19,19 +24,17 @@ This is an educational systems model, not a production load balancer or a crypto
 python3 serve.py
 ```
 
-or open `index.html` through any local static server.
-
 ## Test
 
 ```bash
 npm test
 ```
 
-The project has no runtime package dependencies.
+No runtime package installation is required.
 
-## Hash choice
+## Scope
 
-The implementation uses FNV-1a as a small deterministic teaching hash. It is not collision-resistant and must not be used for security-sensitive hashing.
+This is an educational systems model. It is not a production load balancer, service-discovery system, storage cluster, or benchmark of a deployed distributed system. Browser timing is illustrative and depends on the device.
 
 ## License
 

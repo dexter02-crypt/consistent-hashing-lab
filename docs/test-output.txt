@@ -2,45 +2,81 @@ TAP version 13
 # Subtest: hash deterministic
 ok 1 - hash deterministic
   ---
-  duration_ms: 0.765174
+  duration_ms: 2.112708
   type: 'test'
   ...
-# Subtest: ring sorted and sized
-ok 2 - ring sorted and sized
+# Subtest: string nodes normalize to weight one
+ok 2 - string nodes normalize to weight one
   ---
-  duration_ms: 0.344559
+  duration_ms: 1.003634
   type: 'test'
   ...
-# Subtest: consistent assignment only uses known nodes
-ok 3 - consistent assignment only uses known nodes
+# Subtest: weighted ring allocates proportional replica counts
+ok 3 - weighted ring allocates proportional replica counts
   ---
-  duration_ms: 0.456679
+  duration_ms: 0.507216
   type: 'test'
   ...
-# Subtest: adding a node moves fewer keys than modulo on deterministic sample
-ok 4 - adding a node moves fewer keys than modulo on deterministic sample
+# Subtest: ring sorted
+ok 4 - ring sorted
   ---
-  duration_ms: 13.243018
+  duration_ms: 0.268355
+  type: 'test'
+  ...
+# Subtest: consistent assignment uses known nodes
+ok 5 - consistent assignment uses known nodes
+  ---
+  duration_ms: 0.76866
+  type: 'test'
+  ...
+# Subtest: adding one node moves fewer keys than modulo on deterministic sample
+ok 6 - adding one node moves fewer keys than modulo on deterministic sample
+  ---
+  duration_ms: 34.481401
   type: 'test'
   ...
 # Subtest: distribution counts every assignment
-ok 5 - distribution counts every assignment
+ok 7 - distribution counts every assignment
   ---
-  duration_ms: 0.653366
+  duration_ms: 0.636069
+  type: 'test'
+  ...
+# Subtest: distribution stats are finite with populated nodes
+ok 8 - distribution stats are finite with populated nodes
+  ---
+  duration_ms: 9.861639
+  type: 'test'
+  ...
+# Subtest: weighted nodes move observed share toward weight target
+ok 9 - weighted nodes move observed share toward weight target
+  ---
+  duration_ms: 41.832493
+  type: 'test'
+  ...
+# Subtest: runComparison reports both schemes
+ok 10 - runComparison reports both schemes
+  ---
+  duration_ms: 2.71736
+  type: 'test'
+  ...
+# Subtest: churn add and remove are bounded and deterministic
+ok 11 - churn add and remove are bounded and deterministic
+  ---
+  duration_ms: 0.554217
   type: 'test'
   ...
 # Subtest: input bounds enforced
-ok 6 - input bounds enforced
+ok 12 - input bounds enforced
   ---
-  duration_ms: 0.366383
+  duration_ms: 0.648078
   type: 'test'
   ...
-1..6
-# tests 6
+1..12
+# tests 12
 # suites 0
-# pass 6
+# pass 12
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 71.296317
+# duration_ms 199.795189
