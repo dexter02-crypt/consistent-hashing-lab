@@ -4,6 +4,10 @@ Interactive browser experiment comparing modulo placement with a weighted virtua
 
 **Live demo:** https://dexter02-crypt.github.io/consistent-hashing-lab/
 
+**Release:** [v1.1.0](https://github.com/dexter02-crypt/consistent-hashing-lab/releases/tag/v1.1.0)
+
+![Consistent Hashing Lab weighted-node and remapping experiment](docs/demo.png)
+
 ## v1.1 experiments
 
 - weighted nodes
